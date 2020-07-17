@@ -45,7 +45,7 @@
                             </div>
                             <div class="text-right"><a href="auth-forgot-password.html" class="card-link"><small>Forgot Password?</small></a></div>
                           </div>
-                      </form>
+                        </form>
                         <button  @click="login" class="btn btn-primary glow w-100 position-relative">Login<i id="icon-arrow" class="bx bx-right-arrow-alt"></i></button>
 
                         <hr>
@@ -58,7 +58,7 @@
                 <!-- right section image -->
                 <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
                   <div class="card-content">
-<!--                    <img class="img-fluid" src="../../../app-assets/images/pages/login.png" alt="branding logo">-->
+                    <!--                    <img class="img-fluid" src="../../../app-assets/images/pages/login.png" alt="branding logo">-->
                   </div>
                 </div>
               </div>
@@ -90,7 +90,7 @@
         console.log("getProducts");
         this.loading = true;
         let _this=this;
-        this.$store.dispatch("Login",this.loginForm).then(response => {
+        this.$store.dispatch("Register",this.loginForm).then(response => {
           this.loading = false;
 
           let status=response.status;
@@ -100,7 +100,7 @@
             _this.CHANGEUSERNAME(this.loginForm.username);
             console.log("thisUsername",localStorage.getItem('username'));
             this.$router.push({
-              path: "/home1",
+              path: "/login",
             });
           }
           // console.log("data",response[0].data);

@@ -3,6 +3,7 @@ import {getPetsByUsername} from "../../api/pet";
 import {getPetsById} from "../../api/pet";
 import {addPet} from "../../api/pet";
 import {updatePet} from "../../api/pet";
+import {getCategorys} from "../../api/pet";
 
 const pet = {
   actions: {
@@ -10,6 +11,17 @@ const pet = {
     GetPets({commit}) {
       return new Promise((resolve, reject) => {
         getPets().then(response => {
+          commit('CHANGE')
+          console.log('resopnsee', response);
+          resolve(response)
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    GetCategory({commit}) {
+      return new Promise((resolve, reject) => {
+        getCategorys().then(response => {
           commit('CHANGE')
           console.log('resopnsee', response);
           resolve(response)
@@ -43,9 +55,12 @@ const pet = {
       })
     },
 
-    UpdatePet({commit},petForm) {
+    UpdatePet({commit},petInfo) {
       return new Promise((resolve, reject) => {
-        updatePet(petForm).then(response => {
+        petInfo.full=petInfo.toString();
+        petInfo.health=petInfo.health.toString();
+        petInfo.mood=petInfo.mood.toString();
+        updatePet(petInfo).then(response => {
           commit('CHANGE')
           console.log('resopnsee', response);
           resolve(response)

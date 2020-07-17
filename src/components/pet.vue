@@ -6,7 +6,6 @@
     <!--    <button @click="adoptPets"></button>-->
     <!--    <button @click="getPets"></button>-->
 
-
     <p >{{test}}</p>
     <p >{{id}}</p>
     <p >{{pet}}</p>
@@ -31,19 +30,33 @@
         pet:{},
         pets: "",
         test:"",
-        timer:""
-
+        timer:"",
+        quantity:""
       };
     },
     created() {
       this.id=this.$route.query.id;
       this.flush();
       this.timer = setInterval(this.clock, 1000);
-      this.timer = setInterval(this.clock2, 10000);
+      this.timer = setInterval(this.clock2, 5000);
     },
     methods: {
-      flush(){
+      feet(){
+        this.pet.full=this.pet.health+this.quantity;
+        this.writeToDatabase();
+      },
+      bath(){
+        this.pet.mood=this.pet.health+20;
+        this.writeToDatabase();
+      },
+      play(){
 
+      },
+      cure(){
+        this.pet.mood=this.pet.health+20;
+        this.writeToDatabase();
+      },
+      flush(){
         this.$store.dispatch("GetPetById",this.id).then(response => {
           this.loading = false;
           console.log("data",response.data);
@@ -59,15 +72,13 @@
         this.pet.health=this.pet.health-1;
         this.pet.mood=this.pet.mood-1;
       },
-
       clock2(){
-        var petInfo=this.pet
-        petInfo.full=petInfo.toString();
-        petInfo.health=petInfo.health.toString();
-        petInfo.mood=petInfo.mood.toString();
         console.log("写回数据库");
-
-        this.$store.dispatch("UpdatePet",petInfo).then(response => {
+        this.writeToDatabase();
+        this.flush();
+      },
+      writeToDatabase(){
+        this.$store.dispatch("UpdatePet",this.pet).then(response => {
           this.loading = false;
           console.log("data",response.data);
           this.pet=response.data;
@@ -75,7 +86,6 @@
           console.log("pet",this.pets);
           this.test="teststst";
         });
-
       },
       getPets() {
         console.log("getProducts");

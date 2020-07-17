@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import "../static/css/normalize.css";
+import "../static/css/htmleaf-demo.css";
+import "../static/css/example.css";
 import store from './store/index'
-
 
 Vue.config.productionTip = false
 

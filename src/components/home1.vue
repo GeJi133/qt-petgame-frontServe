@@ -11,8 +11,8 @@
     <p >{{test}}</p>
     <p>这是home</p>
     <p>这是</p>
+    <button @click="addNew">添加新宠物</button>
 
-    <p>{{pets}}</p>
 <!--    <button @click="routeToLogin">登录</button>-->
   </div>
 </template>
@@ -39,6 +39,11 @@
           console.log(this.pets.length);
           console.log("pet",this.pets);
           this.test="teststst";
+        });
+      },
+      addNew(){
+        this.$router.push({
+          path: "/adopt",
         });
       },
       getPets() {

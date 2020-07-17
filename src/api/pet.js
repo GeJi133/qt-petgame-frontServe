@@ -12,6 +12,12 @@ export function getPets () {
     method: 'get',
   })
 }
+export function getCategorys() {
+  return request({
+    url: '/clothes',
+    method: 'get',
+  })
+}
 export function getPetsById (id) {
   return request({
     url: '/pets/'+id,

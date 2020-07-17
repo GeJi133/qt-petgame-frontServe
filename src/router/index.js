@@ -8,6 +8,7 @@ import login from '@/components/login'
 import home1 from '@/components/home1'
 import home from '@/components/home'
 import adopt from '@/components/adopt'
+import register from '@/components/register'
 Vue.use(Router)
 
 export default new Router({
@@ -56,6 +57,11 @@ export default new Router({
       path: '/adopt',
       name: 'adopt',
       component: adopt
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: register
     },
   ]
 })

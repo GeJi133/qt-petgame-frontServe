@@ -7,6 +7,11 @@
 
 <script>
 
+  import "../static/css/components.css";
+
+  import "../static/css/bootstrap-extended.css";
+  import "../static/css/bootstrap-extended.min.css";
+  import "../static/css/bootstrap.css";
 
 export default {
   name: 'App'
@@ -14,11 +19,7 @@ export default {
 </script>
 
 <style>
-  @import "../static/css/components.css";
 
-  @import "../static/css/bootstrap-extended.css";
-  @import "../static/css/bootstrap-extended.min.css";
-  @import "../static/css/bootstrap.css";
 
 /*#app {*/
 /*  font-family: 'Avenir', Helvetica, Arial, sans-serif;*/

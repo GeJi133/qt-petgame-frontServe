@@ -10,3 +10,13 @@ export function login (loginForm) {
     data:loginForm
   })
 }
+export function register (registerForm) {
+  return request({
+    url: '/user',
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/JSON'
+    },
+    data:registerForm
+  })
+}
