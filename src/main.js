@@ -6,7 +6,9 @@ import router from './router'
 import "../static/css/normalize.css";
 import "../static/css/htmleaf-demo.css";
 import "../static/css/example.css";
-
+import store from './store/index'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min'
 
 Vue.config.productionTip = false
 
@@ -14,6 +16,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

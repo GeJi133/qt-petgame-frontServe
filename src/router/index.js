@@ -1,15 +1,55 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-
+import main from '@/components/main'
+import pet from '@/components/pet'
+import friendPet from '@/components/friendPet'
+import login from '@/components/login'
+import home from '@/components/home1'
+import adopt from '@/components/adopt'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/hello',
       name: 'HelloWorld',
       component: HelloWorld
-    }
+    },
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: main
+    },
+    {
+      path: '/pet',
+      name: 'pet',
+      component: pet
+    },
+    {
+      path: '/friendPet',
+      name: 'friendPet',
+      component: friendPet
+    },
+    {
+      path: '/pet',
+      name: 'pet',
+      component: pet
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: home
+    },
+    {
+      path: '/adopt',
+      name: 'adopt',
+      component: adopt
+    },
   ]
 })

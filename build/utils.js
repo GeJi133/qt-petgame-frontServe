@@ -66,7 +66,8 @@ exports.cssLoaders = function (options) {
     styl: generateLoaders('stylus')
   }
 }
-
+data:{
+}
 // Generate loaders for standalone style files (outside of .vue)
 exports.styleLoaders = function (options) {
   const output = []

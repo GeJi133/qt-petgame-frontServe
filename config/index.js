@@ -20,7 +20,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */
@@ -32,7 +32,6 @@ module.exports = {
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
-
     cssSourceMap: true
   },
 
@@ -65,5 +64,16 @@ module.exports = {
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
-  }
+  },
+
+  proxyTable: {  //配置跨域
+    '/': {
+      target: 'http://localhost:8000/',  //这里后台的地址模拟的;应该填写你们真实的后台接口
+      changOrigin: true,  //允许跨域
+      pathRewrite: {
+        '^/': '/'
+      }
+    },
+
+  },
 }
