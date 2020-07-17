@@ -29,6 +29,7 @@ export function addPet (petForm) {
   })
 }
 export function updatePet (petForm) {
+  console.log("去请求了");
   return request({
     url: '/pets',
     method: 'patch',

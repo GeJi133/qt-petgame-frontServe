@@ -30,7 +30,7 @@ const pet = {
         })
       })
     },
-    
+
     GetPetById({commit},id) {
       return new Promise((resolve, reject) => {
         getPetsById(id).then(response => {
@@ -42,6 +42,7 @@ const pet = {
         })
       })
     },
+
     UpdatePet({commit},petForm) {
       return new Promise((resolve, reject) => {
         updatePet(petForm).then(response => {
@@ -53,6 +54,7 @@ const pet = {
         })
       })
     },
+
     AddPet({commit},petForm) {
       return new Promise((resolve, reject) => {
         addPet(petForm).then(response => {

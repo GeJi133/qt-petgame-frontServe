@@ -6,16 +6,14 @@
 <!--    <button @click="adoptPets"></button>-->
 <!--    <button @click="getPets"></button>-->
 
-    <p v-for="pet in pets">lalal{{pet.pname}}</p>
+    <a v-for="pet in pets" href="#" @click="routeToPet(pet.pid)">lalal{{pet.pname}}</a>
     <p >{{pets.length}}</p>
     <p >{{test}}</p>
-
-
     <p>这是home</p>
     <p>这是</p>
 
     <p>{{pets}}</p>
-    <button @click="routeToLogin">登录</button>
+<!--    <button @click="routeToLogin">登录</button>-->
   </div>
 </template>
 
@@ -54,11 +52,15 @@
 
         });
       },
-      routeToLogin(){
+      routeToPet(id){
         this.$router.push({
-          path: "/login",
+          path: "/pet",
+          query:{
+            id:id
+          }
         });
       },
+
     }
   };
 

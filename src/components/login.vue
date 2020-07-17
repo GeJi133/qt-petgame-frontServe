@@ -37,7 +37,7 @@
             _this.CHANGEUSERNAME(this.loginForm.username);
             console.log("thisUsername",localStorage.getItem('username'));
             this.$router.push({
-              path: "/home",
+              path: "/home1",
             });
           }
           // console.log("data",response[0].data);
