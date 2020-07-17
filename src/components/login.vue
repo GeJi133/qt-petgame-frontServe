@@ -117,7 +117,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- @import "@\static\css\components.css";
+ /*@import "@\static\css\components.css";*/
  /* @import "..\..\static\css\bootstrap.css";*/
  /*@import "..\..\static\css\bootstrap.min.css";*/
  /*@import "..\..\static\css\bootstrap-extended.css";*/

@@ -5,7 +5,7 @@
 - Responsive Layout CSS
 - Sidebar
 - Footer CSS
-- Main Menu 
+- Main Menu
 - Content Helpers
 -   Display
 -   Borders
@@ -34,7 +34,7 @@
 - Datatables CSS
 - Pick A Date CSS
 - Daterange CSS
-¸ü¶àÄ£°å£ºhttp://www.bootstrapmb.com/
+ï¿½ï¿½ï¿½ï¿½Ä£ï¿½å£ºhttp://www.bootstrapmb.com/
 -------------------------------------------------------------------*/
 /* Template Css */
 /* ----------- */
@@ -191,7 +191,8 @@ html body p {
 }
 
 html body.bg-full-screen-image {
-  background: url(../../app-assets/images/pages/auth-bg.jpg) no-repeat center center;
+  /*background: url(../../app-assets/images/pages/auth-bg.jpg) no-repeat center center;*/
+  /*background: url(../../app-assets/images/pages/auth-bg.jpg) no-repeat center center;*/
   background-size: cover;
 }
 
