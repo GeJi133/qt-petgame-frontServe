@@ -29,11 +29,12 @@
                         <form action="index.html">
                           <div class="form-group mb-50">
                             <label class="text-bold-600" for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address"></div>
+                            <input type="text" v-model="loginForm.username" class="form-control" id="exampleInputEmail1" placeholder="Email address"></div>
                           <div class="form-group">
                             <label class="text-bold-600" for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" v-model="loginForm.password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                           </div>
+
                           <div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
                             <div class="text-left">
                               <div class="checkbox checkbox-sm">
@@ -44,8 +45,9 @@
                             </div>
                             <div class="text-right"><a href="auth-forgot-password.html" class="card-link"><small>Forgot Password?</small></a></div>
                           </div>
-                          <button type="submit" class="btn btn-primary glow w-100 position-relative">Login<i id="icon-arrow" class="bx bx-right-arrow-alt"></i></button>
-                        </form>
+                      </form>
+                        <button  @click="login" class="btn btn-primary glow w-100 position-relative">Login<i id="icon-arrow" class="bx bx-right-arrow-alt"></i></button>
+
                         <hr>
                         <div class="text-center"><small class="mr-25">Don't have an account?</small><a href="auth-register.html"><small>Sign up</small></a></div>
                       </div>
@@ -117,9 +119,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- /*@import "@\static\css\components.css";*/
- /* @import "..\..\static\css\bootstrap.css";*/
- /*@import "..\..\static\css\bootstrap.min.css";*/
- /*@import "..\..\static\css\bootstrap-extended.css";*/
- /*@import "..\..\static\css\bootstrap-extended.min.css";*/
+
 </style>
